@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sparkplot"
+version = "0.1.0"
+description = "Terminal sparklines, histograms, box plots and bar charts from CSV, JSON or stdin numbers. Zero dependencies."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["terminal", "charts", "sparkline", "histogram", "boxplot", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+
+[project.scripts]
+sparkplot = "sparkplot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sparkplot*"]
